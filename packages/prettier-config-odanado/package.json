@@ -2,6 +2,7 @@
   "name": "prettier-config-odanado",
   "version": "0.0.1",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
