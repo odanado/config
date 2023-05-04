@@ -4,7 +4,11 @@
   "private": true,
   "type": "module",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "npm run lint:tsc && npm run lint:prettier",
+    "lint:tsc": "tsc",
+    "lint:prettier": "prettier --check ."
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/odanado/config.git"
@@ -16,7 +20,13 @@
   },
   "homepage": "https://github.com/odanado/config#readme",
   "workspaces": [
-    "packages/eslint-config-odanado",
-    "packages/prettier-config-odanado"
-  ]
+    "packages/eslint-config",
+    "packages/prettier-config"
+  ],
+  "devDependencies": {
+    "@tsconfig/node18": "2.0.0",
+    "@tsconfig/strictest": "2.0.1",
+    "prettier": "2.8.8",
+    "typescript": "5.0.4"
+  }
 }

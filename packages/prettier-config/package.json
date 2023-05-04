@@ -1,11 +1,12 @@
 {
-  "name": "eslint-config-odanado",
+  "name": "@odanado/prettier-config",
   "version": "0.0.1",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.cts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --project tsconfig.build.json"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/odanado/config/issues"
   },
-  "homepage": "https://github.com/odanado/config#readme"
+  "homepage": "https://github.com/odanado/config#readme",
+  "devDependencies": {
+    "@types/prettier": "2.7.2"
+  }
 }
