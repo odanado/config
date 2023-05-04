@@ -1,9 +1,11 @@
 {
-  "name": "config",
-  "version": "0.0.0",
-  "private": true,
+  "name": "eslint-config-odanado",
+  "version": "0.0.1",
+  "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/odanado/config.git"
@@ -13,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/odanado/config/issues"
   },
-  "homepage": "https://github.com/odanado/config#readme",
-  "workspaces": [
-    "packages/eslint-config-odanado",
-    "packages/prettier-config-odanado"
-  ]
+  "homepage": "https://github.com/odanado/config#readme"
 }
