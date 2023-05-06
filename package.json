@@ -7,9 +7,10 @@
   "packageManager": "npm@9.3.1",
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "lint": "npm run lint:tsc && npm run lint:prettier",
+    "lint": "npm run lint:tsc && npm run lint:eslint && npm run lint:prettier",
     "lint:tsc": "tsc",
-    "lint:prettier": "prettier --check ."
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint --ext .js,.cjs,.mjs,.ts,.cts,.mts --ignore-path .gitignore . --max-warnings 0"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@tsconfig/node18": "2.0.0",
     "@tsconfig/strictest": "2.0.1",
+    "eslint": "8.39.0",
     "prettier": "2.8.8",
     "typescript": "5.0.4"
   }

@@ -3,9 +3,15 @@
   "version": "0.0.1",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "exports": {
+    "typescript": {
+      "type": "./dist/typescript.d.cjs",
+      "require": "./dist/typescript.cjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rm -rf dist",
+    "build": "tsc --project tsconfig.build.json"
   },
   "repository": {
     "type": "git",
@@ -16,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/odanado/config/issues"
   },
-  "homepage": "https://github.com/odanado/config#readme"
+  "homepage": "https://github.com/odanado/config#readme",
+  "devDependencies": {
+    "@types/eslint": "8.37.0",
+    "@types/eslint-config-prettier": "6.11.0",
+    "@typescript-eslint/eslint-plugin": "5.59.2",
+    "@typescript-eslint/parser": "5.59.2",
+    "eslint-config-prettier": "8.8.0"
+  }
 }
