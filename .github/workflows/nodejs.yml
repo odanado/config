@@ -36,4 +36,4 @@ jobs:
       - run: corepack enable
       - run: npm ci
 
-      - run: changeset status --since=main
+      - run: npx changeset status --since=main
