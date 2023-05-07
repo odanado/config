@@ -3,9 +3,22 @@
   "version": "0.0.1",
   "description": "",
   "type": "module",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.cts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "type": "./dist/index.d.cjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
+    "prepublishOnly": "npm run build",
+    "prebuild": "rm -rf dist",
     "build": "tsc --project tsconfig.build.json"
   },
   "repository": {

@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "description": "",
   "type": "module",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     "typescript": {
       "type": "./dist/typescript.d.cjs",
@@ -10,6 +17,7 @@
     }
   },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "prebuild": "rm -rf dist",
     "build": "tsc --project tsconfig.build.json"
   },
