@@ -28,6 +28,7 @@
     "packages/prettier-config"
   ],
   "devDependencies": {
+    "@changesets/changelog-github": "0.4.8",
     "@changesets/cli": "2.26.1",
     "@tsconfig/node18": "2.0.0",
     "@tsconfig/strictest": "2.0.1",
