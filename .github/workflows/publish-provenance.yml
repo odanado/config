@@ -1,0 +1,30 @@
+name: Publish With Provenance
+
+on:
+  workflow_dispatch:
+    inputs:
+      workspace:
+        type: string
+        required: true
+        description: a name of workspace
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  publish:
+    permissions:
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ./.node-version
+          registry-url: "https://registry.npmjs.org"
+      - run: corepack enable
+      - run: npm ci
+      - run: npm run build
+
+      - run: npm publish --provenance --workspace ${{ github.event.inputs.workspace }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
