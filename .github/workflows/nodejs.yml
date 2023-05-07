@@ -37,7 +37,5 @@ jobs:
 
       - run: corepack enable
       - run: npm ci
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
 
       - run: npx changeset status --since=main
