@@ -13,6 +13,7 @@ jobs:
           node-version-file: ./.node-version
           registry-url: "https://registry.npmjs.org"
       - run: npm ci
+      - run: npm run build
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
