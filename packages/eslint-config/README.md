@@ -1,0 +1,1 @@
+# @odanado/eslint-config
