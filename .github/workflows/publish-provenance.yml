@@ -13,6 +13,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   publish:
     permissions:
+      contents: read
       id-token: write
     runs-on: ubuntu-latest
     steps:
@@ -21,10 +22,10 @@ jobs:
         with:
           node-version-file: ./.node-version
           registry-url: "https://registry.npmjs.org"
-      - run: corepack enable
+      - run: npm install -g npm@latest
       - run: npm ci
       - run: npm run build
 
-      - run: npm publish --provenance --workspace ${{ github.event.inputs.workspace }}
+      - run: npm publish --workspace ${{ github.event.inputs.workspace }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
