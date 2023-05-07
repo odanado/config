@@ -1,5 +1,11 @@
 # @odanado/eslint-config
 
+## 0.0.6
+
+### Patch Changes
+
+- [`8461a22`](https://github.com/odanado/config/commit/8461a2257c42d9e2ee2a383bb0a000bbf8d174af) Thanks [@odanado](https://github.com/odanado)! - add provenance: true
+
 ## 0.0.5
 
 ### Patch Changes
