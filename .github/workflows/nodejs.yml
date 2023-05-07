@@ -30,6 +30,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 100 # for changeset status
+      - run: git fetch origin main
 
       - uses: actions/setup-node@v3
         with:
@@ -38,4 +39,4 @@ jobs:
       - run: corepack enable
       - run: npm ci
 
-      - run: npx changeset status --since=main
+      - run: npx changeset status --since=origin/main
