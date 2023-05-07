@@ -27,6 +27,7 @@
     "packages/prettier-config"
   ],
   "devDependencies": {
+    "@changesets/cli": "2.26.1",
     "@tsconfig/node18": "2.0.0",
     "@tsconfig/strictest": "2.0.1",
     "eslint": "8.39.0",
