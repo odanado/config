@@ -4,9 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       workspace:
-        type: string
+        type: choice
         required: true
         description: a name of workspace
+        options:
+          - "@odanado/prettier-config"
+          - "@odanado/eslint-config"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
