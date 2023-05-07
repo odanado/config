@@ -1,5 +1,11 @@
 # @odanado/prettier-config
 
+## 0.0.9
+
+### Patch Changes
+
+- [`b62444e`](https://github.com/odanado/config/commit/b62444ee751492fc6374e6585c146e8ded28aca7) Thanks [@odanado](https://github.com/odanado)! - bump up
+
 ## 0.0.8
 
 ### Patch Changes
